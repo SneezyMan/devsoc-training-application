@@ -32,13 +32,13 @@ a {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scrollbar-width: none;
 }
 
 .page {
   scroll-snap-align: start;
   height: 100vh;
   font-size: 1.5rem;
-  padding-top: 80px;
 }
 
 a:hover {
@@ -47,7 +47,6 @@ a:hover {
 
 /* NAVBAR */
 .top-nav {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -89,12 +88,13 @@ a:hover {
 }
 
 /* Page 1: Introduction */
-.page1-content {
+.page1-content .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 50px;
+  padding-top: 100px;
   gap: 40px;
   width: 100%;
 }
@@ -110,30 +110,49 @@ a:hover {
   color: var(--text-color);
 }
 
-.page1-content .toc {
-  flex: 1;
-  max-width: 250px;
+.page1-content .bottom {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.toc {
+.page1-content .bottom .dog-dance {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page1-content .text p {
+  margin-bottom: 10px;
+}
+
+.page1-content .toc {
+  flex: 1;
+  max-width: 300px;
   background: #3f3f3f;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
 
-.toc h3 {
+.page1-content .toc h3 {
   margin-bottom: 20px;
 }
 
-.toc ul {
+.page1-content .toc ul {
   list-style: none;
   padding-left: 0;
 }
 
-.toc li {
+.page1-content .toc li {
   margin-bottom: 10px;
 }
+
+.page1-content .bottom {
+  margin-top: 3%;
+}
+
 
 /* SECTION 2: Introduction */
 
@@ -156,11 +175,21 @@ a:hover {
   margin-bottom: 20px;
 }
 
+.page2-content .text ul {
+  padding-left: 20px;
+}
+
+.page2-content .text li {
+  font-size: 20px;
+}
+
 .page2-content .images {
   flex: 1;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  width: 100%;
 }
 
 .page2-content .figure {
@@ -186,4 +215,83 @@ a:hover {
 
 .page2-content span {
   margin-top: 20px;
+}
+
+/* BLUE_MOUNTAIN.HTML */
+#blue_mountain .page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 30px;
+  gap: 10px;
+  width: 100%;
+}
+
+#blue_mountain .page-content .button {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: -20px;
+}
+
+#blue_mountain .page-content .text p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+#blue_mountain .page-content .images {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#blue_mountain .page-content .images .image-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#blue_mountain .page-content .images .image-block img {
+  border-radius: 2%;
+  margin-top: 10px;
+}
+
+
+
+/* SECTION 3: Experience */
+
+.page3-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px;
+  gap: 10px;
+  width: 100%;
+}
+
+.page3-content .text {
+  flex: 1;
+}
+
+.page3-content .text p {
+  margin-top: 20px;
+}
+
+.page3-content .table ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 10px 30px;
+}
+
+.page3-content .table li {
+  flex: 1 1 30%;
 }
